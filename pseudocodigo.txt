@@ -1,0 +1,30 @@
+INICIO
+
+Crear una lista vacía llamada productos.
+
+Cargar productos desde el archivo inventario.txt si existe.
+
+Mostrar menú:
+1. Agregar producto
+2. Listar productos
+3. Buscar producto
+4. Salir
+
+Si el usuario elige 1:
+    Pedir nombre, precio y stock.
+    Guardar el producto en la lista.
+    Guardar los datos en inventario.txt.
+
+Si el usuario elige 2:
+    Mostrar todos los productos registrados.
+
+Si el usuario elige 3:
+    Pedir el nombre del producto.
+    Buscar el producto en la lista.
+    Mostrar sus datos si existe.
+    Mostrar mensaje de no encontrado si no existe.
+
+Si el usuario elige 4:
+    Finalizar el programa.
+
+FIN
