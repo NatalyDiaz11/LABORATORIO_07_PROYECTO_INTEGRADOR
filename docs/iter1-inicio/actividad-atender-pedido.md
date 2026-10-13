@@ -59,19 +59,22 @@ La operación debe marcarse como pendiente de revisión hasta corregir el proble
 
 ## Compensación
 
-### C1 - Restaurar información anterior
+### C1 - Restaurar información o mantener el pedido pendiente
 
-Si la atención del pedido falla después de modificar el stock o el estado del pedido, el sistema debe restaurar los valores anteriores o mantener la operación como pendiente.
+Si ocurre un error durante la actualización del stock, el sistema debe intentar restaurar los valores anteriores cuando sea posible hacerlo de forma segura.
 
-Esto evita que exista un pedido confirmado con cantidades incorrectas en almacén.
+Si no puede garantizarse una restauración consistente, el pedido debe mantenerse en estado Pendiente de revisión y no debe confirmarse.
 
+Esto evita que exista un pedido confirmado con cantidades incorrectas en el stock.
 ## Reglas del proceso
 
 - Un pedido no puede confirmarse si no existe disponibilidad suficiente.
-- Producción y almacén se representan como funciones diferentes aunque una misma persona pueda cumplir ambas responsabilidades.
-- El stock solo debe actualizarse cuando la atención del pedido haya sido confirmada.
-- El pedido debe mantener un estado identificable durante todo el proceso.
-- Los cambios realizados deben conservar coherencia entre pedido, producción y almacén.
+- La confirmación definitiva del pedido solo debe realizarse después de que la actualización del stock termine correctamente.
+- Producción es responsable de elaborar o preparar los productos que no se encuentran disponibles y de actualizar su estado de producción.
+- Almacén es responsable de controlar las existencias, registrar ingresos y salidas de productos y mantener actualizado el stock disponible.
+- Producción y Almacén se mantienen como funciones diferentes aunque una misma persona pueda asumir ambas responsabilidades.
+- El estado del pedido debe mantenerse identificable durante todo el proceso.
+- Los cambios realizados deben conservar coherencia entre pedido, producción, almacén y stock.
 
 ## Diagrama Mermaid
 
