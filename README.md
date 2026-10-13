@@ -40,7 +40,7 @@ Archivos:
 
 ## Tablero Trello
 
-Enlace: PENDIENTE
+Enlace: https://trello.com/b/kFtQdBaR 
 
 ## Versión
 
