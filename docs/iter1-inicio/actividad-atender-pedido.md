@@ -82,58 +82,47 @@ Esto evita que exista un pedido confirmado con cantidades incorrectas en el stoc
 flowchart TD
 
 A([Inicio]) --> B[Recibir o seleccionar pedido pendiente]
-
 B --> C[Mostrar cliente y detalle del pedido]
-
-C --> D{¿Cliente registrado?}
+C --> D{Cliente registrado}
 
 D -- No --> E[Registrar o actualizar cliente]
 E --> C
 
-D -- Sí --> F[Revisar productos y cantidades]
-
+D -- Si --> F[Revisar productos y cantidades]
 F --> G[Consultar disponibilidad en stock]
+G --> H{Stock suficiente}
 
-G --> H{¿Stock suficiente?}
+H -- Si --> I[Preparar atencion del pedido]
 
-H -- Sí --> I[Preparar atención del pedido]
-
-H -- No --> J{¿Producto puede producirse?}
+H -- No --> J{Producto puede producirse}
 
 J -- No --> K[Modificar pedido o dejar pendiente]
+K --> L{Continuar con el pedido}
 
-K --> L{¿Continuar con pedido?}
+L -- Si --> F
+L -- No --> M([Fin: pedido pendiente o cancelado])
 
-L -- Sí --> F
-L -- No --> Z([Fin: pedido pendiente o cancelado])
+J -- Si --> N[Registrar necesidad de produccion]
+N --> O[Produccion actualiza estado del producto]
+O --> P{Producto disponible}
 
-J -- Sí --> M[Registrar necesidad de producción]
+P -- No --> N
+P -- Si --> Q[Almacen actualiza existencias]
+Q --> I
 
-M --> N[Producción actualiza estado del producto]
+I --> R[Actualizar stock]
+R --> S{Actualizacion correcta}
 
-N --> O{¿Producto disponible?}
+S -- No --> T[Restaurar informacion anterior]
+T --> U{Restauracion correcta}
 
-O -- No --> M
+U -- Si --> V[Dejar pedido pendiente]
+U -- No --> W[Marcar pedido pendiente de revision]
 
-O -- Sí --> P[Almacén actualiza existencias]
+V --> X([Fin: pedido pendiente])
+W --> X
 
-P --> I
-
-I --> Q[Confirmar atención del pedido]
-
-Q --> R[Actualizar stock]
-
-R --> S{¿Actualización correcta?}
-
-S -- No --> T[Restaurar información anterior]
-
-T --> U[Marcar pedido pendiente de revisión]
-
-U --> Z
-
-S -- Sí --> V[Actualizar estado del pedido]
-
-V --> W[Mostrar confirmación]
-
-W --> X([Fin: pedido atendido])
-
+S -- Si --> Y[Confirmar atencion del pedido]
+Y --> Z[Actualizar estado del pedido a Atendido]
+Z --> AA[Mostrar confirmacion]
+AA --> AB([Fin: pedido atendido])
