@@ -25,6 +25,8 @@ Actualmente varios procesos del negocio se realizan de forma manual o dependen d
 - Gestión de recursos humanos.
 - Seguimiento GPS de repartos.
 
+En esta iteración, el cliente realiza la solicitud del pedido, pero no registra directamente la información en el sistema. El vendedor es responsable de registrar y gestionar el pedido a partir de la solicitud del cliente.
+
 ## 4. Interesados
 
 | Rol | Necesidad |
@@ -36,16 +38,18 @@ Actualmente varios procesos del negocio se realizan de forma manual o dependen d
 | Administrador | Consultar y controlar la información general del sistema. |
 
 ## 5. Objetivos medibles
-- Reducir errores en el registro y seguimiento de pedidos.
-- Mejorar el control de inventario.
-- Mantener actualizada la información de clientes y pedidos.
-- Facilitar la coordinación entre ventas, producción y almacén.
-- Centralizar la información relevante del negocio.
+
+- Validar la disponibilidad antes de confirmar el 100 % de los pedidos.
+- Mantener un estado identificable para el 100 % de los pedidos registrados.
+- Evitar que un pedido sea confirmado cuando falle la actualización del stock.
+- Mantener trazabilidad entre pedido, producción, almacén y stock en las operaciones atendidas.
+- Reducir inconsistencias entre la información del pedido y las existencias registradas mediante validaciones antes de la confirmación.
 
 ## 6. Requisitos de alto nivel
 - REQ-001: Registrar y actualizar información del cliente.
 - REQ-002: Atender pedido.
 - REQ-003: Consultar y actualizar stock.
+La actualización del stock asociada a la atención de un pedido se realiza al completar correctamente la operación. Almacén también puede realizar actualizaciones manuales por ingresos, reposiciones o ajustes que no estén directamente asociados a un pedido.
 - REQ-004: Gestionar información de producción.
 - REQ-005: Gestionar información de almacén.
 - REQ-006: Consultar el estado de los pedidos.
