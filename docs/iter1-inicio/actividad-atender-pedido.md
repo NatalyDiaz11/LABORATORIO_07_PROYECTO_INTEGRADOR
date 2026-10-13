@@ -8,18 +8,19 @@ Representar el flujo principal de atención de un pedido en Khanauky, consideran
 
 1. El vendedor recibe o selecciona un pedido pendiente.
 2. El sistema muestra la información del cliente y el detalle del pedido.
-3. El vendedor revisa los productos y cantidades solicitadas.
-4. El sistema verifica si el cliente se encuentra registrado.
+3. El sistema verifica si el cliente se encuentra registrado.
+4. El vendedor revisa los productos y cantidades solicitadas.
 5. El sistema consulta la disponibilidad de los productos en stock.
 6. Si todos los productos están disponibles, el pedido continúa.
 7. Si algún producto requiere producción, se registra la necesidad de producción.
 8. Producción actualiza el estado del producto cuando se encuentra disponible.
 9. Almacén verifica y actualiza las existencias correspondientes.
-10. El vendedor revisa nuevamente el pedido y confirma la atención.
-11. El sistema actualiza el stock según los productos asignados al pedido.
-12. El sistema actualiza el estado del pedido a atendido o confirmado.
-13. El sistema muestra la confirmación de la operación.
-14. Fin.
+10. El vendedor revisa nuevamente el pedido.
+11. El sistema actualiza el stock correspondiente a los productos que serán atendidos.
+12. Si la actualización del stock se realiza correctamente, el sistema confirma la atención del pedido.
+13. El sistema actualiza el estado del pedido a Atendido.
+14. El sistema muestra la confirmación de la operación.
+15. Fin.
 
 ## Excepciones
 
