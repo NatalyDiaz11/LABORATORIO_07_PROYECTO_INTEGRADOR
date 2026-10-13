@@ -1,3 +1,17 @@
+## Criterios de evaluación
+
+### Probabilidad
+
+- Baja: el riesgo es poco probable durante la iteración.
+- Media: el riesgo puede ocurrir si no se aplican controles.
+- Alta: existe una alta posibilidad de que ocurra durante la iteración.
+
+### Impacto
+
+- Bajo: afecta parcialmente una actividad sin comprometer el proceso principal.
+- Medio: afecta una funcionalidad o puede generar retrasos en la iteración.
+- Alto: compromete información, el proceso crítico o la entrega del sistema.
+
 # Riesgos del proyecto - Khanauky
 
 | ID | Fase | Riesgo | Probabilidad | Impacto | Mitigación | Responsable |
@@ -6,7 +20,7 @@
 | RSK-002 | Elaboración | Inconsistencia entre el estado del pedido, stock, producción y almacén. | Media | Alto | Definir reglas claras de actualización y mantener trazabilidad entre pedido, stock, producción y almacén. | Arquitecto / Analista |
 | RSK-003 | Elaboración | Modelar Producción y Almacén como una sola función y perder responsabilidades relevantes del proceso. | Media | Alto | Mantener ambas funciones diferenciadas en casos de uso, actividades y demás modelos, aunque una misma persona pueda ejecutarlas. | Analista |
 | RSK-004 | Construcción | Confirmar un pedido con stock insuficiente o con información desactualizada. | Media | Alto | Validar disponibilidad antes de confirmar el pedido y probar escenarios con cantidades superiores al stock disponible. | Desarrollador |
-| RSK-005 | Construcción | Fallo durante la actualización de stock después de confirmar un pedido. | Media | Alto | Implementar compensación C1 para restaurar la información anterior o dejar el pedido pendiente de revisión. | Desarrollador |
+| RSK-005 | Construcción | Fallo durante la actualización de stock después de confirmar un pedido. | Media | Alto | Restaurar los valores anteriores cuando la reversión pueda realizarse de forma segura. Si no se puede garantizar la consistencia, mantener el pedido pendiente de revisión y evitar su confirmación. | Desarrollador |
 | RSK-006 | Transición | El usuario no comprende correctamente los estados del pedido o el flujo de atención. | Media | Medio | Ejecutar pruebas de aceptación, registrar observaciones y preparar un manual breve de uso. | Líder del proyecto |
 
 ## Tarjetas sugeridas para la lista "Riesgos" en Trello
