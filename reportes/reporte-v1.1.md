@@ -56,6 +56,7 @@ Para validar el cambio se mantienen y agregan las siguientes pruebas:
 - PRU-003: consultar y actualizar el stock de un producto.
 - PRU-003a: actualizar el stock manteniéndolo por encima o igual al mínimo definido.
 - PRU-003b: actualizar el stock dejándolo por debajo del mínimo definido y comprobar la generación de la alerta.
+- PRU-003c: atender un pedido con un producto sin stock mínimo configurado y comprobar que el sistema informe la condición, permita continuar y no genere la alerta.
 
 Estado de ejecución de pruebas: Pendiente.
 
