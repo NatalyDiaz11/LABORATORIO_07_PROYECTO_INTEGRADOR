@@ -1,11 +1,14 @@
 # Convenciones del proyecto Khanauky
 
 ## IDs
-REQ-### requisito
-CU-### caso de uso
-RSK-### riesgo
-ITER-# iteracion
-CLS-Nombre clase
+
+REQ-### requisito  
+CU-### caso de uso  
+RSK-### riesgo  
+ITER-# iteracion  
+CLS-Nombre clase  
+PRU-### prueba  
+CR-### solicitud de cambio
 
 ## Carpetas
 docs/iterN-fase/ documentos de cada iteracion

@@ -1,0 +1,55 @@
+# Casos de uso - Khanauky
+
+## CU-001: Gestionar clientes
+Cubre: REQ-001
+
+- Actor principal: Vendedor
+- Descripción: Permite registrar y consultar información de clientes.
+
+---
+
+## CU-002: Atender pedido
+Cubre: REQ-003, REQ-004, REQ-005 y REQ-006
+
+- Actor principal: Vendedor
+- Actores relacionados: Cliente, Producción y Almacén
+
+### Flujo principal
+1. El vendedor recibe o selecciona un pedido pendiente.
+2. El sistema muestra la información del cliente y el detalle del pedido.
+3. El vendedor revisa los productos y cantidades solicitadas.
+4. El sistema verifica la disponibilidad de stock.
+5. Si es necesario, se coordina la producción del producto.
+6. Almacén confirma la salida de los productos correspondientes al pedido.
+7. El sistema descuenta las cantidades entregadas y actualiza el stock registrado.
+8. Si la actualización es correcta, se confirma la atención del pedido.
+9. El estado del pedido cambia a Atendido.
+10. El sistema muestra la confirmación final.
+
+### Excepciones
+- Stock insuficiente.
+- Error durante la actualización del stock.
+- Pedido pendiente de revisión.
+- Información del cliente incompleta.
+
+---
+
+## CU-003: Registrar pedido
+Cubre: REQ-002
+
+- Actor principal: Vendedor
+- Actor relacionado: Cliente
+
+### Flujo principal
+1. El vendedor identifica o selecciona al cliente.
+2. Registra los productos y cantidades solicitadas.
+3. El sistema valida que los datos obligatorios estén completos.
+4. El sistema registra el pedido.
+5. El pedido queda con estado Pendiente.
+6. El sistema muestra la confirmación del registro.
+
+### Excepciones
+- El cliente no se encuentra registrado.
+- Faltan datos obligatorios del pedido.
+- No se han registrado productos o cantidades.
+- Ocurre un error durante el registro del pedido.
