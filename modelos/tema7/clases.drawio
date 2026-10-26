@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net">
   <diagram name="Diagrama de clases - Tema 7" id="0aF6Nn3-FnwsR1xOZnAs">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2148" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,7 +11,7 @@
         <mxCell id="tDN8Cs2GuHGNseESqdih-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" value="&lt;b&gt;CLS-Pedido&lt;/b&gt;&lt;hr&gt;- idPedido: int&lt;br&gt;- fecha: date&lt;br&gt;- estado: string&lt;br&gt;- total: decimal&lt;hr&gt;+ registrar()&lt;br&gt;+ atender()&lt;br&gt;+ consultarEstado()&lt;br&gt;+ confirmar()" vertex="1">
           <mxGeometry height="220" width="290" x="420" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="tDN8Cs2GuHGNseESqdih-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" value="&lt;div&gt;&lt;b&gt;CLS-Stock&lt;/b&gt;&lt;/div&gt;&lt;div&gt;----------------&lt;/div&gt;&lt;div&gt;- idStock: int&lt;/div&gt;&lt;div&gt;- cantidadDisponible: int&lt;/div&gt;&lt;div&gt;- stockMinimo: int&lt;/div&gt;&lt;div&gt;----------------&lt;/div&gt;&lt;div&gt;+ consultar()&lt;/div&gt;&lt;div&gt;+ validarDisponibilidad()&lt;/div&gt;&lt;div&gt;+ actualizar()&lt;/div&gt;&lt;div&gt;+ generarAlertaStockMinimo()&lt;/div&gt;" vertex="1">
+        <mxCell id="tDN8Cs2GuHGNseESqdih-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" value="&lt;div&gt;&lt;b&gt;CLS-Stock&lt;/b&gt;&lt;/div&gt;&lt;div&gt;----------------&lt;/div&gt;&lt;div&gt;- idStock: int&lt;/div&gt;&lt;div&gt;- cantidadDisponible: int&lt;/div&gt;&lt;div&gt;- stockMinimo: int&lt;/div&gt;&lt;div&gt;----------------&lt;/div&gt;&lt;div&gt;+ consultar()&lt;/div&gt;&lt;div&gt;+ validarDisponibilidad()&lt;/div&gt;&lt;div&gt;+ actualizar()&lt;/div&gt;&lt;div&gt;+ verificarStockMinimo()&lt;/div&gt;&lt;div&gt;+ generarAlertaStockMinimo()&lt;/div&gt;" vertex="1">
           <mxGeometry height="210" width="290" x="930" y="80" as="geometry" />
         </mxCell>
         <mxCell id="tDN8Cs2GuHGNseESqdih-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" value="&lt;b&gt;CLS-Produccion&lt;/b&gt;&lt;hr&gt;- idProduccion: int&lt;br&gt;- fecha: date&lt;br&gt;- cantidad: int&lt;br&gt;- estado: string&lt;hr&gt;+ registrarProduccion()&lt;br&gt;+ consultarEstado()" vertex="1">
