@@ -22,13 +22,16 @@ Cubre: REQ-003, REQ-004, REQ-005 y REQ-006
 5. Si es necesario, se coordina la producción del producto.
 6. Almacén confirma la salida de los productos correspondientes al pedido.
 7. El sistema descuenta las cantidades entregadas y actualiza el stock registrado.
-8. Si la actualización es correcta, se confirma la atención del pedido.
-9. El estado del pedido cambia a Atendido.
-10. El sistema muestra la confirmación final.
+8. El sistema compara la cantidad disponible con el stock mínimo definido.
+9. Si la cantidad disponible queda por debajo del stock mínimo, el sistema genera una alerta para Almacén.
+10. Si la actualización es correcta, se confirma la atención del pedido.
+11. El estado del pedido cambia a Atendido.
+12. El sistema muestra la confirmación final.
 
 ### Excepciones
-- Stock insuficiente.
+- Stock insuficiente para atender el pedido.
 - Error durante la actualización del stock.
+- Stock mínimo no configurado.
 - Pedido pendiente de revisión.
 - Información del cliente incompleta.
 
