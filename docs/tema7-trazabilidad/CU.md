@@ -12,17 +12,19 @@ Cubre: REQ-002, REQ-003, REQ-004, REQ-005 y REQ-006
 - Actor principal: Vendedor
 - Actores relacionados: Cliente, Producción y Almacén
 
+## CU-003: Registrar pedido
+Cubre: REQ-002
+
+- Actor principal: Vendedor
+- Actor relacionado: Cliente
+
 ### Flujo principal
-1. El vendedor recibe o selecciona un pedido pendiente.
-2. El sistema muestra la información del cliente y el detalle del pedido.
-3. El vendedor revisa los productos y cantidades solicitadas.
-4. El sistema verifica la disponibilidad de stock.
-5. Si es necesario, se coordina la producción del producto.
-6. Almacén actualiza las existencias.
-7. El sistema actualiza el stock.
-8. Si la actualización es correcta, se confirma la atención del pedido.
-9. El estado del pedido cambia a Atendido.
-10. El sistema muestra la confirmación final.
+1. El vendedor identifica o selecciona al cliente.
+2. Registra los productos y cantidades solicitadas.
+3. El sistema valida que los datos obligatorios estén completos.
+4. El sistema registra el pedido.
+5. El pedido queda con estado Pendiente.
+6. El sistema muestra la confirmación del registro.
 
 ### Excepciones
 - Stock insuficiente.
