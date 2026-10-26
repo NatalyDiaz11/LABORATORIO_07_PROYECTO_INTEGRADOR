@@ -1,7 +1,90 @@
-<mxfile host="app.diagrams.net" version="24.7.17">
-<diagram id="khanauky-t7-mejorado" name="Diagrama de clases - Tema 7">
-<mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" page="1" pageWidth="1400" pageHeight="900">
-<root><mxCell id="0"/><mxCell id="1" parent="0"/><mxCell id="cliente" value="&lt;b&gt;CLS-Cliente&lt;/b&gt;&lt;hr&gt;- idCliente: int&lt;br&gt;- nombre: string&lt;br&gt;- telefono: string&lt;hr&gt;+ registrar()&lt;br&gt;+ consultar()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="60" y="100" width="250" height="170" as="geometry"/></mxCell><mxCell id="pedido" value="&lt;b&gt;CLS-Pedido&lt;/b&gt;&lt;hr&gt;- idPedido: int&lt;br&gt;- fecha: date&lt;br&gt;- estado: string&lt;br&gt;- total: decimal&lt;hr&gt;+ registrar()&lt;br&gt;+ atender()&lt;br&gt;+ consultarEstado()&lt;br&gt;+ confirmar()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="420" y="80" width="290" height="220" as="geometry"/></mxCell><mxCell id="stock" value="&lt;b&gt;CLS-Stock&lt;/b&gt;&lt;hr&gt;- idStock: int&lt;br&gt;- cantidadDisponible: int&lt;br&gt;- stockMinimo: int&lt;hr&gt;+ consultar()&lt;br&gt;+ validarDisponibilidad()&lt;br&gt;+ actualizar()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="830" y="80" width="290" height="210" as="geometry"/></mxCell><mxCell id="produccion" value="&lt;b&gt;CLS-Produccion&lt;/b&gt;&lt;hr&gt;- idProduccion: int&lt;br&gt;- fecha: date&lt;br&gt;- cantidad: int&lt;br&gt;- estado: string&lt;hr&gt;+ registrarProduccion()&lt;br&gt;+ consultarEstado()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="420" y="430" width="310" height="190" as="geometry"/></mxCell><mxCell id="almacen" value="&lt;b&gt;CLS-Almacen&lt;/b&gt;&lt;hr&gt;- idAlmacen: int&lt;br&gt;- nombre: string&lt;br&gt;- ubicacion: string&lt;hr&gt;+ consultarExistencias()&lt;br&gt;+ actualizarExistencias()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="830" y="430" width="310" height="190" as="geometry"/></mxCell><mxCell id="e1" value="realiza" style="endArrow=none;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;fontSize=12;" edge="1" parent="1" source="cliente" target="pedido"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="e1s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="e1"><mxGeometry x="-0.82" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell><mxCell id="e1t" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="e1"><mxGeometry x="0.82" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell><mxCell id="e2" value="verifica disponibilidad" style="endArrow=none;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;fontSize=12;" edge="1" parent="1" source="pedido" target="stock"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="e2s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="e2"><mxGeometry x="-0.82" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell><mxCell id="e2t" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="e2"><mxGeometry x="0.82" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell><mxCell id="e3" value="solicita produccion" style="endArrow=none;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;fontSize=12;" edge="1" parent="1" source="pedido" target="produccion"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="e3s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="e3"><mxGeometry x="-0.82" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell><mxCell id="e3t" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="e3"><mxGeometry x="0.82" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell><mxCell id="e4" value="genera salida de almacen" style="endArrow=none;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;fontSize=12;" edge="1" parent="1" source="pedido" target="almacen"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="e4s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="e4"><mxGeometry x="-0.82" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell><mxCell id="e4t" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="e4"><mxGeometry x="0.82" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell><mxCell id="e5" value="administra" style="endArrow=none;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;fontSize=12;" edge="1" parent="1" source="almacen" target="stock"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="e5s" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="e5"><mxGeometry x="-0.82" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell><mxCell id="e5t" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="e5"><mxGeometry x="0.82" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell></root>
-</mxGraphModel>
-</diagram>
+<mxfile host="app.diagrams.net">
+  <diagram name="Diagrama de clases - Tema 7" id="0aF6Nn3-FnwsR1xOZnAs">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tDN8Cs2GuHGNseESqdih-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" value="&lt;b&gt;CLS-Cliente&lt;/b&gt;&lt;hr&gt;- idCliente: int&lt;br&gt;- nombre: string&lt;br&gt;- telefono: string&lt;hr&gt;+ registrar()&lt;br&gt;+ consultar()" vertex="1">
+          <mxGeometry height="170" width="250" x="-40" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" value="&lt;b&gt;CLS-Pedido&lt;/b&gt;&lt;hr&gt;- idPedido: int&lt;br&gt;- fecha: date&lt;br&gt;- estado: string&lt;br&gt;- total: decimal&lt;hr&gt;+ registrar()&lt;br&gt;+ atender()&lt;br&gt;+ consultarEstado()&lt;br&gt;+ confirmar()" vertex="1">
+          <mxGeometry height="220" width="290" x="420" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" value="&lt;div&gt;&lt;b&gt;CLS-Stock&lt;/b&gt;&lt;/div&gt;&lt;div&gt;----------------&lt;/div&gt;&lt;div&gt;- idStock: int&lt;/div&gt;&lt;div&gt;- cantidadDisponible: int&lt;/div&gt;&lt;div&gt;- stockMinimo: int&lt;/div&gt;&lt;div&gt;----------------&lt;/div&gt;&lt;div&gt;+ consultar()&lt;/div&gt;&lt;div&gt;+ validarDisponibilidad()&lt;/div&gt;&lt;div&gt;+ actualizar()&lt;/div&gt;&lt;div&gt;+ generarAlertaStockMinimo()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="290" x="930" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" value="&lt;b&gt;CLS-Produccion&lt;/b&gt;&lt;hr&gt;- idProduccion: int&lt;br&gt;- fecha: date&lt;br&gt;- cantidad: int&lt;br&gt;- estado: string&lt;hr&gt;+ registrarProduccion()&lt;br&gt;+ consultarEstado()" vertex="1">
+          <mxGeometry height="190" width="310" x="410" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=13;strokeWidth=1.5;" value="&lt;b&gt;CLS-Almacen&lt;/b&gt;&lt;hr&gt;- idAlmacen: int&lt;br&gt;- nombre: string&lt;br&gt;- ubicacion: string&lt;hr&gt;+ consultarExistencias()&lt;br&gt;+ actualizarExistencias()" vertex="1">
+          <mxGeometry height="190" width="310" x="920" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-6" edge="1" parent="1" source="tDN8Cs2GuHGNseESqdih-1" style="endArrow=none;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;fontSize=12;" target="tDN8Cs2GuHGNseESqdih-2" value="realiza">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-7" connectable="0" parent="tDN8Cs2GuHGNseESqdih-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-8" connectable="0" parent="tDN8Cs2GuHGNseESqdih-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-9" edge="1" parent="1" source="tDN8Cs2GuHGNseESqdih-2" style="endArrow=none;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;fontSize=12;" target="tDN8Cs2GuHGNseESqdih-3" value="verifica disponibilidad">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-10" connectable="0" parent="tDN8Cs2GuHGNseESqdih-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-11" connectable="0" parent="tDN8Cs2GuHGNseESqdih-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-12" edge="1" parent="1" source="tDN8Cs2GuHGNseESqdih-2" style="endArrow=none;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;fontSize=12;" target="tDN8Cs2GuHGNseESqdih-4" value="solicita produccion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-13" connectable="0" parent="tDN8Cs2GuHGNseESqdih-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-14" connectable="0" parent="tDN8Cs2GuHGNseESqdih-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-15" edge="1" parent="1" source="tDN8Cs2GuHGNseESqdih-2" style="endArrow=none;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;fontSize=12;" target="tDN8Cs2GuHGNseESqdih-5" value="genera salida de almacen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-16" connectable="0" parent="tDN8Cs2GuHGNseESqdih-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-17" connectable="0" parent="tDN8Cs2GuHGNseESqdih-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-18" edge="1" parent="1" source="tDN8Cs2GuHGNseESqdih-5" style="endArrow=none;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;fontSize=12;" target="tDN8Cs2GuHGNseESqdih-3" value="administra">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-19" connectable="0" parent="tDN8Cs2GuHGNseESqdih-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tDN8Cs2GuHGNseESqdih-20" connectable="0" parent="tDN8Cs2GuHGNseESqdih-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
 </mxfile>
