@@ -1,7 +1,5 @@
 # Pruebas - Khanauky
 
-# Pruebas - Khanauky
-
 | ID | Requisito | Qué se prueba | Resultado esperado |
 |---|---|---|---|
 | PRU-001 | REQ-001 | Registrar y consultar un cliente con datos válidos | Cliente registrado y visible en el sistema |
