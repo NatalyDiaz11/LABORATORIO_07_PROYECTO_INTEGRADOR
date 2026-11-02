@@ -53,7 +53,7 @@ Esta pantalla representa una implementación del proceso utilizado para registra
 
 **Caso de uso relacionado:** CU-003 Registrar pedido.
 
-![UI-CU003-01 - Registrar pedido](../../evidencias/lab3/UI-CU003-01-registrador-venta-pedido.png)
+![UI-CU003-01 - Registrar pedido](../../evidencias/lab3/UI-CU003-01-registrar-venta-pedido.png)
 
 ---
 
