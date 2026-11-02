@@ -1,0 +1,19 @@
+<mxfile host="app.diagrams.net" modified="2026-11-02T22:30:00.000Z" agent="ChatGPT" version="24.7.17">
+  <diagram id="pkg-lab5" name="Paquetes Khanauky">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Diagrama de paquetes - Khanauky" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="300" y="30" width="560" height="40" as="geometry"/></mxCell>
+        <mxCell id="p1" value="&lt;b&gt;Clientes&lt;/b&gt;&lt;br&gt;&lt;br&gt;Cliente" style="shape=folder;tabWidth=60;tabHeight=20;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingTop=30;spacingLeft=15;" vertex="1" parent="1"><mxGeometry x="90" y="150" width="220" height="140" as="geometry"/></mxCell>
+        <mxCell id="p2" value="&lt;b&gt;Ventas&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pedido&lt;br&gt;DetallePedido" style="shape=folder;tabWidth=60;tabHeight=20;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingTop=30;spacingLeft=15;" vertex="1" parent="1"><mxGeometry x="455" y="140" width="240" height="160" as="geometry"/></mxCell>
+        <mxCell id="p3" value="&lt;b&gt;Inventario&lt;/b&gt;&lt;br&gt;&lt;br&gt;Producto&lt;br&gt;Stock&lt;br&gt;Almacen" style="shape=folder;tabWidth=60;tabHeight=20;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingTop=30;spacingLeft=15;" vertex="1" parent="1"><mxGeometry x="820" y="130" width="240" height="180" as="geometry"/></mxCell>
+        <mxCell id="p4" value="&lt;b&gt;Produccion&lt;/b&gt;&lt;br&gt;&lt;br&gt;Produccion" style="shape=folder;tabWidth=60;tabHeight=20;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingTop=30;spacingLeft=15;" vertex="1" parent="1"><mxGeometry x="455" y="430" width="240" height="140" as="geometry"/></mxCell>
+        <mxCell id="e1" value="usa" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="p2" target="p1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" value="consulta / actualiza" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="p2" target="p3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" value="actualiza stock" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="p4" target="p3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="note" value="Las dependencias entre paquetes se mantienen en un solo sentido para reducir acoplamiento." style="shape=note;whiteSpace=wrap;html=1;size=15;" vertex="1" parent="1"><mxGeometry x="815" y="420" width="260" height="110" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
