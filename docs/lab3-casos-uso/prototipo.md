@@ -29,7 +29,7 @@ Esta interfaz permite comprobar que el sistema dispone de información relaciona
 
 **Caso de uso relacionado:** CU-001 Gestionar clientes.
 
-![UI-CU001-01 - Clientes registrados](../../evidencias/laboratorio3/UI-CU001-01-clientes-registrados.png)
+![UI-CU001-01 - Clientes registrados](../../evidencias/lab3/UI-CU001-01-clientes-registrados.png)
 
 ---
 
@@ -53,7 +53,7 @@ Esta pantalla representa una implementación del proceso utilizado para registra
 
 **Caso de uso relacionado:** CU-003 Registrar pedido.
 
-![UI-CU003-01 - Registrar pedido](../../evidencias/laboratorio3/UI-CU003-01-registrador-venta-pedido.png)
+![UI-CU003-01 - Registrar pedido](../../evidencias/lab3/UI-CU003-01-registrador-venta-pedido.png)
 
 ---
 
@@ -75,7 +75,7 @@ Esta pantalla permite relacionar la producción registrada con la disponibilidad
 
 **Caso de uso relacionado:** CU-005 Registrar producción.
 
-![UI-CU005-01 - Producción](../../evidencias/laboratorio3/UI-CU005-01-produccion-lotes.png)
+![UI-CU005-01 - Producción](../../evidencias/lab3/UI-CU005-01-produccion-lotes.png)
 
 ---
 
@@ -104,7 +104,7 @@ Esta funcionalidad permite conocer y actualizar el avance de una venta o pedido.
 
 **Caso de uso relacionado:** CU-007 Consultar estado del pedido.
 
-![UI-CU007-01 - Estado de pedidos](../../evidencias/laboratorio3/UI-CU007-01-estado-reporte-ventas.png)
+![UI-CU007-01 - Estado de pedidos](../../evidencias/lab3/UI-CU007-01-estado-reporte-ventas.png)
 
 ---
 
@@ -129,7 +129,7 @@ Esta pantalla facilita el seguimiento del pedido y permite identificar rápidame
 
 **Caso de uso relacionado:** CU-007 Consultar estado del pedido.
 
-![UI-CU007-02 - Seguimiento de pedidos](../../evidencias/laboratorio3/UI-CU007-02-seguimiento-pedidos.png)
+![UI-CU007-02 - Seguimiento de pedidos](../../evidencias/lab3/UI-CU007-02-seguimiento-pedidos.png)
 
 ---
 
