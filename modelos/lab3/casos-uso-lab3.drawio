@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net" modified="2026-11-02T20:00:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="lab3CasosUso" name="Casos de uso Khanauky">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- System boundary -->
+        <mxCell id="sys" value="Sistema Khanauky" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;align=left;verticalAlign=top;spacingTop=8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="90" width="820" height="740" as="geometry"/>
+        </mxCell>
+
+        <!-- Actors -->
+        <mxCell id="actor_vendedor" value="Vendedor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="180" width="60" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_cliente" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="520" width="60" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_produccion" value="Producción" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="170" width="60" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_almacen" value="Almacén" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="420" width="60" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_admin" value="Administrador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="650" width="60" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Use cases -->
+        <mxCell id="uc1" value="CU-001&#xa;Gestionar clientes" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="sys">
+          <mxGeometry x="70" y="70" width="170" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc2" value="CU-002&#xa;Atender pedido" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="sys">
+          <mxGeometry x="300" y="70" width="170" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc3" value="CU-003&#xa;Registrar pedido" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="sys">
+          <mxGeometry x="540" y="70" width="170" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc7" value="CU-007&#xa;Consultar estado del pedido" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="sys">
+          <mxGeometry x="300" y="230" width="210" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc4" value="CU-004&#xa;Consultar y actualizar stock" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="sys">
+          <mxGeometry x="530" y="390" width="220" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc5" value="CU-005&#xa;Registrar producción" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="sys">
+          <mxGeometry x="80" y="520" width="220" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc6" value="CU-006&#xa;Registrar salida de almacén" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="sys">
+          <mxGeometry x="530" y="560" width="240" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc8" value="Supervisar operaciones" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="sys">
+          <mxGeometry x="280" y="520" width="220" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Associations -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_vendedor" target="uc1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_vendedor" target="uc2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_vendedor" target="uc3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_vendedor" target="uc7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_cliente" target="uc3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_cliente" target="uc7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_produccion" target="uc5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_produccion" target="uc2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_almacen" target="uc4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_almacen" target="uc6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_almacen" target="uc2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_admin" target="uc8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_admin" target="uc4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;" edge="1" parent="1" source="actor_admin" target="uc7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
