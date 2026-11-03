@@ -13,6 +13,7 @@ Conocer las principales dificultades relacionadas con el registro de clientes, p
 
 ### Hallazgo esperado
 Se identifican dificultades relacionadas con información dispersa, seguimiento manual de pedidos y falta de actualización inmediata del estado de cada solicitud.
+Las entrevistas, encuestas y observaciones descritas corresponden a una propuesta de elicitación aplicada al contexto del proyecto académico Khanauky. Los hallazgos presentados representan resultados esperados a partir de las necesidades identificadas durante el análisis del sistema.
 
 ### Necesidad identificada
 El sistema debe centralizar el registro de pedidos y permitir consultar su estado de manera rápida.
