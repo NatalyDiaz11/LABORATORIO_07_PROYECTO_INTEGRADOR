@@ -31,7 +31,7 @@ A partir de las necesidades identificadas en el proceso del negocio, se definen 
 | RNF-01 | No funcional - Usabilidad | El sistema debe presentar una interfaz clara y comprensible que permita al personal registrar y consultar información sin requerir capacitación especializada. |
 | RNF-02 | No funcional - Seguridad | El sistema debe permitir el acceso a la información únicamente a usuarios autorizados según las funciones que realizan dentro del negocio. |
 | RNF-03 | No funcional - Confiabilidad | El sistema debe conservar la consistencia de la información de pedidos y stock durante las operaciones de registro y actualización. |
-| RNF-04 | No funcional - Disponibilidad | El sistema debe mantener disponible la información necesaria para consultar clientes, pedidos, producción, almacén y stock durante las operaciones habituales del negocio. |
+| RNF-04 | No funcional - Disponibilidad | El sistema debe mantener una disponibilidad mínima del 95 % durante el horario habitual de operaciones del negocio. |
 
 ---
 
@@ -48,3 +48,20 @@ Los requerimientos no funcionales establecen cualidades, restricciones o condici
 Se identificaron seis requerimientos funcionales y cuatro requerimientos no funcionales para Khanauky.
 
 Estos requerimientos constituyen una base inicial para continuar con la elicitación, análisis, modelado y trazabilidad en los siguientes laboratorios.
+
+## Convención de identificadores
+
+En los Laboratorios 1 al 5 se utiliza la nomenclatura RF-01, RF-02, etc., para identificar los requisitos funcionales.
+
+En la documentación posterior de trazabilidad del proyecto se utiliza la nomenclatura REQ-001, REQ-002, etc.
+
+La equivalencia utilizada es:
+
+| Laboratorios 1-5 | Trazabilidad posterior |
+|---|---|
+| RF-01 | REQ-001 |
+| RF-02 | REQ-002 |
+| RF-03 | REQ-003 |
+| RF-04 | REQ-004 |
+| RF-05 | REQ-005 |
+| RF-06 | REQ-006 |
