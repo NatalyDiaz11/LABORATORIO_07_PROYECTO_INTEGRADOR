@@ -12,6 +12,18 @@
 
 ---
 
+### Dependencia entre historias
+
+Aunque HU-02 Registrar pedido presenta una prioridad alta, su ejecución requiere que previamente exista un cliente registrado.
+
+Por ello, dentro del Sprint 1 se establece el siguiente orden de implementación:
+
+1. HU-01 Registrar cliente.
+2. HU-02 Registrar pedido.
+3. HU-03 Consultar y actualizar stock.
+
+---
+
 ## 2. Historias revisadas
 
 Durante la sesión se revisaron las cinco historias de usuario definidas para Khanauky:
