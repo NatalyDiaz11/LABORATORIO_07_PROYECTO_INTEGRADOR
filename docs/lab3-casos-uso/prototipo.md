@@ -49,7 +49,8 @@ Durante el registro se puede:
 - Registrar el monto pagado.
 - Confirmar la venta.
 
-Esta pantalla representa una implementación del proceso utilizado para registrar una solicitud de productos dentro del sistema.
+
+La interfaz actual del sistema utiliza la denominación "Registrar venta". Para efectos del modelado del proyecto, esta interfaz se relaciona con el CU-003 Registrar pedido, ya que permite seleccionar un cliente, registrar productos y cantidades e iniciar la operación asociada al pedido.
 
 **Caso de uso relacionado:** CU-003 Registrar pedido.
 
