@@ -75,3 +75,13 @@ Se selecciona la **Opción B**, debido a que obtiene el mayor puntaje.
 La verificación automática del stock permite mantener la confiabilidad de la información y reducir el riesgo de atender pedidos con productos no disponibles, sin impedir que el proceso continúe cuando exista stock suficiente.
 
 Esta decisión se relaciona directamente con el requisito de control de stock del proyecto Khanauky.
+
+### Evidencia de la validación
+
+Durante la sesión de walkthrough participaron representantes relacionados con las áreas de ventas, producción y almacén, junto con integrantes del equipo del proyecto.
+
+Durante la revisión se analizaron los requisitos relacionados con registro de pedidos, control de stock, producción, almacén y consulta del estado del pedido.
+
+Las principales observaciones estuvieron relacionadas con la necesidad de verificar el stock antes de confirmar la atención de un pedido y mantener actualizado el estado de cada pedido.
+
+Como resultado, los requisitos fueron revisados y aceptados, incorporándose las observaciones correspondientes a la documentación.
